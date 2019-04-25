@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de datos de usuarios en nuestra WEB</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Segoe UI;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Segoe UI;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Segoe UI;
+            text-align: center;
+        }
+        h4 {
+            font-size: 0.8em;
+            font-family: Segoe UI;
+            text-align: left;
+        }
+        div.text {
+            font-family: Segoe UI;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Visualización de datos de usuarios en nuestra WEB </h1>
+    <h4 class="main-autor">Nombre: Paloma Macías Calderón</h4>
+    <h4 class="main-url">Url: 
+      <a ref="https://as07seminario.stackblitz.io">
+      https://as07seminario.stackblitz.io</a>
+    </h4>
+    <h4 class="main-fecha">Fecha: 30/Abril/2019</h4>
+    <hr>
+    <br>
+    <h2 class="text-title">CONTEXTO</h2>
+    <div class="text">
+      Para una empresa que se dedica a la venta de productos en su página web, es muy importante poder medir el tráfico de los usuarios que la visitan, para poder estudiar y realizar campañas que aumenten dichas ventas. 
+      Para ello, deberemos obtener datos y representarlos para que nuestros compañeros puedan realizar y hacer un seguimiento posterior de las diferentes campañas de marqueting que desarrollen.
+    </div>
+    <hr>
+    <br>
+    
+    
+    <h2 class="text-title">DATOS</h2>
+    <div class="text">
+      Estos datos, los vamos a obtener de Google Analytics. Por suerte, las principales herramientas de visualización, tienen integraciones para obtener estos datos de una forma más o menos sencilla. Deberemos indagar en la cantidad de información que nos proporciona para seleccionar los datos que necesitemos. 
+      Los datos los he obtenido con Power BI, ya que conocía un poco la herramienta. Cuento con licencia en el trabajo y he exportado esos datos a un CVS que son los que he utilizado para el seminario. (Me hubiera gustado hacerlo directamente en Tableau, pero al no contar con Licencia en mi empresa, no nos ha parecido lo correcto).
+    </div>
+    <hr>
+    <br>
+    
+    
+    <h2 class="text-title">RESUMEN / PROPÓSITO</h2>
+    <div class="text">
+      En este proyecto se va a hacer un estudio de los usuarios que visitan la página web de una organización: dispositivos desde los que se conectan, cuando lo hacen, si son nuevos o recurrentes y su localización. 
+      Me he dado cuenta de que contamos con mucha más información valiosa, pero en este caso, he seleccionado estos tres parámetros, para representar varios tipos de gráficos diferentes que hemos visto en la asignatura y ceñirme al objetivo de este seminario.
+      El propósito de este trabajo es dotar a nuestro departamento de marqueting de información que necesitan para desempeñar su trabajo en los ámbitos de mejora de ventas a través de campañas y promociones específicas. Del mismo modo decidir en qué medios y localizaciones serán más efectivas dichas campañas.
+      Podremos responder infinidad de preguntas, pero he seleccionado las siguientes:
+      <OL>
+      <LI>¿Cómo evolucionan a lo largo del año el número de usuarios recurrentes y nuevos? </LI>
+      <LI>¿Qué horas y días de la semana nos visitan más?</LI>
+      <LI>¿Desde qué provincias tememos más tráfico?</LI>
+      <LI>¿Desde qué dispositivos se conectan nuestros usuarios?</LI>
+      </OL>
+    </div>
+    <hr>
+    <br>
+    
+    
+    <h2 class="text-title">AUDIENCIA</h2>
+    <div class="text">
+      Estas visualizaciones e informes van dirigidas al departamento de Marqueting de la empresa. Desde este departamento, podrán utilizar esta información para poder estudiar y realizar campañas específicas a los diferentes usuarios. 
+    </div>
+    <hr>
+    <br>
+
+
+
+    <h2 class="text-title">MENSAJE</h2>
+    <h3 class="text-title">Evolución de usuarios nuevos</h3>
+    <div class="text">
+       <B> GRÁFICO DE LÍNEAS</B>
+      He utilizado un gráfico de Líneas. El motivo ha sido para ver la evolución temporal a lo largo de un año de nuestra variable cuantitativa número de sesiones de los dos tipos de usuarios. 
+      Este gráfico nos permite ver a simple vista en que épocas del año y temporadas, nos visitan más nuestros clientes y también permitirá a Marketing conocer el impacto que tienen las diferentes campañas que han realizado en el aumento del tráfico de la web.
+      También he realizado la misma representación en un <B>gráfico de barras</B>.
+
+    </div>
+    <DIV>
+    <a href="https://ibb.co/5KjvvwB"><img src="https://i.ibb.co/NTNppbZ/Evoluci-n-de-usuarios-nuevos-y-totales.jpg" alt="Evoluci-n-de-usuarios-nuevos-y-totales" border="0"></a>
+    </DIV>
+
+    <h3 class="text-title">Usuarios por horas de la semana</h3>
+    <div class="text">
+    <B> MAPA DE CALOR.</B>
+    He seleccionado esta representación para poder visualizar el número de clientes por días de la semana y horas en un periodo determinado. Este gráfico nos permite ver e identificar patrones en las horas en los que se conectan nuestros clientes.
+    En la parte derecha aparece la leyenda que me indica el rango de color relacionado con número total de clientes.
+
+
+    </div>
+    <DIV>
+        AQUI GRÁFICO
+    </DIV>
+
+
+    <h3 class="text-title">Localización de nuestros usuarios</h3>
+    <div class="text">
+    <B> MAPA CLOROPÉPTICO</B>
+    He utilizado esta representación para geolocalizar a los visitantes para poder ver desde que comunidades nos visitan más nuestros clientes.
+
+
+
+    </div>
+    <DIV>
+        AQUI GRÁFICO
+    </DIV>
+
+
+
+    <h3 class="text-title">Dispositivos desde los que nos visitan</h3>
+    <div class="text">
+    <B> GRÁFICO DE TARTAS</B>
+    En un periodo definido, podremos ver en un gráfico de tartas, el porcentaje de los diferentes dispositivos.
+
+
+    </div>
+    <DIV>
+        AQUI GRÁFICO
+    </DIV>
+
+
+</body>
+</html>
