@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Jude moon">
-    <title>Visualización de datos de usuarios en nuestra WEB</title>
+    <title>Visitantes en nuestra WEB</title>
 
     <!-- load d3 and dimple libraries -->
     <script src="http://d3js.org/d3.v4.min.js"></script>
@@ -12,6 +12,9 @@
 
     <!-- add styles to text and graphics -->
     <style>
+        img {
+          padding: 20px;
+        }
         h1 {
             background-color: black;
             color: floralwhite;
@@ -19,8 +22,8 @@
             width: 100%;
             height: 100px;
             text-align: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 40px;
+
         }
         h2 {
             font-size: 1.4em;
@@ -31,7 +34,9 @@
         }
         h3 {
             font-family: Segoe UI;
-            text-align: center;
+            text-align: left;
+            text-decoration:underline;
+            padding: 5px;
         }
         h4 {
             font-size: 0.8em;
@@ -43,12 +48,21 @@
             padding: 5px;
             margin: 20px;
             border-radius: 10px;
+            text-align:justify;
         }
+        /* cuando vayamos a imprimir ... */
+		    @media print{
+			  /* indicamos el salto de pagina */
+			  .saltoDePagina{
+				display:block;
+				page-break-before:always;
+			}
+		}
     </style>
 </head>
 
 <body>
-    <h1 class="main-title">Visualización de datos de usuarios en nuestra WEB </h1>
+    <h1 class="main-title">Visitantes en nuestra WEB</h1>
     <h4 class="main-autor">Nombre: Paloma Macías Calderón</h4>
     <h4 class="main-url">Url: 
       <a ref="https://as07seminario.stackblitz.io">
@@ -74,7 +88,7 @@
     <hr>
     <br>
     
-    
+    <div class="saltoDePagina"></div>
     <h2 class="text-title">RESUMEN / PROPÓSITO</h2>
     <div class="text">
       En este proyecto se va a hacer un estudio de los usuarios que visitan la página web de una organización: dispositivos desde los que se conectan, cuando lo hacen, si son nuevos o recurrentes y su localización. 
@@ -100,25 +114,31 @@
     <br>
 
 
-
+    <div class="saltoDePagina"></div>
     <h2 class="text-title">MENSAJE</h2>
-    <h3 class="text-title"> Evolución de Clientes</h3>
+
+    <!--1. EVOLUCIÓN DE VISITANTES-->
+    <h3 class="text-title"> Evolución de Visitantes</h3>
     <div class="text">
       <B> GRÁFICO DE LÍNEAS</B><br>
       El motivo de este gráfico ha sido para ver la evolución temporal a lo largo de un año de nuestra variable cuantitativa número de sesiones de los dos tipos de usuarios. 
-      Este gráfico nos permite ver a simple vista en que épocas del año y temporadas, nos visitan más nuestros clientes y también permitirá a Marketing conocer el impacto que tienen las diferentes campañas que han realizado en el aumento del tráfico de la web.<br><br>
+      Nos permite ver a simple vista en que épocas del año y temporadas, nos visitan más nuestros clientes y permitirá a Marketing conocer el impacto que tienen las diferentes campañas que han realizado en el aumento del tráfico de la web.<br><br>
       <B> GRÁFICO DE BARRAS </B><br>
       He añadido también la representación en un <B>gráfico de barras</B> dónde hace un sumatorio por mes de las visitas para tener otra visión global.<br><br>
       <B> FILTROS </B><br>
       He añadido un filtro de fechas para que el departamento de Marqueting pueda obtener los datos de las fechas que necesite. <br><br>
       <B> UTILIDAD </B><br>
-      Podemos observar patrones de como se comportan nuestros clientes a lo largo del año, así como la relación entre los totales y los nuevos. Por ejemplo podemos ver que los lunes hay picos de visitas a nuestra web. También tenemos subidas en periodos de rebajas, black friday o Navidades.
+      Podemos observar patrones de cómo se comportan nuestros clientes a lo largo del año, así como la relación entre los totales y los nuevos. Por ejemplo, podemos ver que los lunes hay picos de visitas. También tenemos crecidas en periodos de rebajas, black friday o Navidades.
     </div>
     <DIV>
-      <a href="https://ibb.co/YBpG7Yn"><img src="https://i.ibb.co/CKhF5NC/Evoluci-n-de-usuarios-nuevos-y-totales-2.jpg" alt="Evoluci-n-de-usuarios-nuevos-y-totales-2" border="0"></a>
+      <a href="https://ibb.co/YBpG7Yn" target="_blank">
+      <img src="https://i.ibb.co/CKhF5NC/Evoluci-n-de-usuarios-nuevos-y-totales-2.jpg" alt="Evoluci-n-de-usuarios-nuevos-y-totales-2" border="0" width="500" height="400">
+      </a>
     </DIV>
     
-    
+    <div class="saltoDePagina"></div>
+
+    <!--2. MAPA DE CALOR-->
     <h3 class="text-title">Visitantes por días y horas de la semana</h3>
     <div class="text">
     <B> MAPA DE CALOR.</B> <br>
@@ -130,35 +150,61 @@
     Este informe es muy valioso para Marqueting ya que puede comprobar cuando es más eficiente lanzar campañas o revisar el impacto de alguna campaña en concreto filtrando las fechas que necesite.
     </div>
     <DIV>
-       <a href="https://ibb.co/9hwxwj9"><img src="https://i.ibb.co/ZSHQHC6/mapa-calor-2.jpg" alt="mapa-calor-2" border="0"></a>
+       <a href="https://ibb.co/9hwxwj9" target="_blank"><img src="https://i.ibb.co/ZSHQHC6/mapa-calor-2.jpg" alt="mapa-calor-2" border="0"></a>
     </DIV>
 
+    <div class="saltoDePagina"></div>
 
+    <!--3. MAPA DE PROVINCIAS-->
     <h3 class="text-title">Localización de nuestros usuarios</h3>
     <div class="text">
     <B> MAPA CLOROPÉPTICO</B>
     He utilizado esta representación para geolocalizar a los visitantes para poder ver desde que comunidades nos visitan más nuestros clientes.
-
-
-
+    <B> FILTROS </B><br>
+    He añadido un filtro de fechas para poder observar los datos en un periodo concreto. <br><br>
+    <B> UTILIDAD </B><br>
+    Este informe nos da mucha información de las provincias en las que nos visitan los clientes y nos permite realizar campañas específicas cruzando los datos de residencia con los que también contamos.
     </div>
     <DIV>
-        AQUI GRÁFICO
+        <a href="https://ibb.co/99G6kL2" target="_blank"><img src="https://i.ibb.co/ynVtc15/3-mapa-provincias.jpg" alt="3-mapa-provincias" border="0"></a>
     </DIV>
 
+    <div class="saltoDePagina"></div>
 
-
+    <!--4. GRÁFICO DE TARTAS-->
     <h3 class="text-title">Dispositivos desde los que nos visitan</h3>
     <div class="text">
-    <B> GRÁFICO DE TARTAS</B>
-    En un periodo definido, podremos ver en un gráfico de tartas, el porcentaje de los diferentes dispositivos.
-
-
+    <B> GRÁFICO DE TARTAS</B><br>
+    En un periodo de un año que en nuestra empresa dividimos en 4 temporadas, podremos ver de una manera muy clara y sencilla, en un gráfico de tartas, el porcentaje de los diferentes dispositivos.
+    <br><br>
+    <B> UTILIDAD </B><br>
+    Actualmente Marqueting y Web están realizando campañas y mejorando la usabilidad para las diferentes versiones y es una información muy valiosa para ellos.
     </div>
     <DIV>
-        AQUI GRÁFICO
+      <a href="https://imgbb.com/" target="_blank"><img src="https://i.ibb.co/TKY4Fmy/porcentaje-dispositivos.jpg" alt="porcentaje-dispositivos" border="0"></a>
     </DIV>
+   
 
+    <hr>
+    <br>
+    
+    <div class="saltoDePagina"></div>
+
+    <!-- HERRAMIENTAS Y CONCLUSIONES-->
+    <h2 class="text-title">HERRAMIENTAS SELECCIONADAS Y REFLEXIONES PERSONALES</h2>
+    <div class="text">
+      <h3 class="text-title"> TABLEAU</h3>
+      El motivo de la selección de la herramienta Tableau ha sido fundamentalmente académico. Tenía ganas de profundizar más en su uso, por lo que la mayoría de las representaciones las he realizado con la misma.<br>
+      Estoy acostumbrada a tratar con datos, pero la mayoría de las veces me los piden y los muestro en modo tabla, sin ningún tipo de visualización, por lo que tenía ganas de aprender una herramienta de visualización diferente como es Tableau. Además, había realizado algún trabajo con Power BI y quería ver el alcance y las diferencias entre ambas, ya que es algo muy demandado actualmente en el mercado. <br>
+      <h3 class="text-title"> EXCEL </h3>
+      Por otro lado, he utilizado gráficos de Excel (similar a google sheet) por el requerimiento de seleccionar una segunda herramienta. Lo había utilizado también para tratar los datos, pero no me había puesto a ver todas las visualizaciones de las que dispone. De todas formas, en este caso, creo que falta la parte de interacción con el usuario de poder hacer filtros según se necesite. Aunque para algunos casos de entregar informes estáticos, puede ser muy buena opción y sencilla. 
+      <h3 class="text-title"> PROCESO SEGUIDO </h3>
+      <li>Para realizar el trabajo, me había planteado en un primer momento las preguntas que quería responder. </li>
+      <li>Después de eso, he mirado de que datos disponía. Como hemos aprendido en la mayoría de asignaturas, la parte que más me ha costado es la de preparar los datos para realizar las visualizaciones (transformaciones, redondeos, filtros, normalización, etc). </li>
+      <li>Después estuve revisando que representaciones vistas en la asignatura, eran las más adecuadas para mostrar la información. </li>
+      <li>Una vez seleccionadas dichas representaciones, empecé a indagar en Tableau como hacerlas.</li>
+      <li>La parte que más me ha costado es la de los mapas, ya que la estructura de datos de ciudades, regiones, provincias, no he conseguido cuadrarla del todo con la edición de ubicaciones, pero he aprendido mucho en el proceso y con un poco más de tiempo, podría haber realizado alguna mejor representación con mapas.</li>
+    </div>
 
 </body>
 </html>
